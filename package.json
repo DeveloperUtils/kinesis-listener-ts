@@ -1,0 +1,65 @@
+{
+  "name": "kinesis-listing-dumper-ts",
+  "version": "0.0.1",
+  "description": "Kinesis CLI to listen to kinesis streams and have an idea of the messages that transits or dump events",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "tsc && node ./dist/index.js",
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "types": "dist/**/*.d.ts",
+  "bin": {
+    "kinesis-listing-dumper": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeveloperUtils/kinesis-listing-dumper-ts.git"
+  },
+  "keywords": [
+    "aws",
+    "kinesis",
+    "cli",
+    "dump"
+  ],
+  "author": "Christoph Graupner <ch.graupner@workingdeveloper.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeveloperUtils/kinesis-listing-dumper-ts/issues"
+  },
+  "homepage": "https://github.com/DeveloperUtils/kinesis-listing-dumper-ts#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.138",
+    "@types/node": "^12.7.4",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "@types/bluebird": "^3.5.27",
+    "@types/inquirer": "^6.5.0",
+    "aws-sdk": "^2.524.0",
+    "bluebird": "^3.7.0",
+    "chalk": "^2.4.2",
+    "cli-spinners": "^2.2.0",
+    "commander": "^3.0.1",
+    "indent-string": "^4.0.0",
+    "inquirer": "^7.0.0",
+    "lodash": "^4.17.15",
+    "log-update": "^3.3.0",
+    "moment": "^2.24.0"
+  }
+}
