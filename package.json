@@ -51,7 +51,7 @@
   "dependencies": {
     "@types/bluebird": "^3.5.27",
     "@types/inquirer": "^6.5.0",
-    "aws-sdk": "^2.524.0",
+    "aws-sdk": "^2.814.0",
     "bluebird": "^3.7.0",
     "chalk": "^2.4.2",
     "cli-spinners": "^2.2.0",
